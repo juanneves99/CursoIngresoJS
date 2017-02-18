@@ -45,4 +45,47 @@ function CalcularPrecio ()
  			break;
  		}
  	}
+ 	if(Cantidad==4&& Marca=="ArgentinaLuz" || "FelipeLamparas")
+ 	{
+ 		precioDescuento=(Cantidad*PrecioBruto)*0.75;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+ 	}
+ 	else
+ 	{
+ 		switch(Marca)
+ 		{
+ 			case "JeLuz":
+ 			case "HazIluminacion":
+ 			case "Osram":
+ 			precioDescuento=(Cantidad*PrecioBruto)*0.2;
+ 			document.getElementById('precioDescuento').value=precioDescuento;
+ 			break;
+ 		}
+ 	}
+ 	if(Cantidad==3&& Marca=="ArgentinaLuz")
+ 	{
+ 		precioDescuento=(Cantidad*PrecioBruto)*0.15;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+ 	}
+ 	else
+ 	{
+ 		if(Cantidad==3&& Marca=="FelipeLamparas")
+ 		{
+ 			precioDescuento=(Cantidad*PrecioBruto)*0.10;
+ 			document.getElementById('precioDescuento').value=precioDescuento;
+ 		}
+ 		else
+ 		{
+ 			switch(Marca)
+ 			{
+ 				case "JeLuz":
+ 				case "HazIluminacion":
+ 				case "Osram":
+ 				precioDescuento=(Cantidad*PrecioBruto)*0.5;
+ 				document.getElementById('precioDescuento').value=precioDescuento;
+ 				break;
+ 			}
+ 		}
+ 	}
+
 }
