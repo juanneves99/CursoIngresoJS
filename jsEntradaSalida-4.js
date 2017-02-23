@@ -4,8 +4,29 @@
 */
 function Mostar()
 {
-	var nombre;
-	nombre= prompt ("ingrese su nombre");
-	document.getElementById('elNombre').value=nombre;
+	var numeroUno;
+	var numeroDos;
+	var resultado;
+
+	numeroUno=document.getElementById('numeroUno').value;
+	numeroDos=document.getElementById('numeroDos').value;
+
+	if(numeroUno==numeroDos)
+	{
+		numeroUno*numeroDos;
+	}
+
+	if(numeroUno>numeroDos)
+	{
+		numeroUno-numeroDos;
+	}
+	else
+	{
+		if(numeroUno<numeroDos)
+		{
+			numeroUno+numeroDos;
+		}
+	}
+	document.write(resultado);
 }
 

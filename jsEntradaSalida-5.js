@@ -2,10 +2,17 @@
 ej.: "Usted se llama José y tiene 66 años" 	*/
 function Mostar()
 {	
-	var nombre;
-	var edad;
-	nombre=document.getElementById('elNombre').value;
-	edad=document.getElementById('laEdad').value;
-	alert("Usted se llama " + nombre+ " y tiene " + edad+ " años");
+	var dia;
+	dia=document.getElementById('dia')
+
+	switch(diaDeLaSemana)
+	{
+		case "Sabado":
+		case "Domingo":
+		alert("Es fin de semana !");
+		break;
+		default:
+		alert("A trabajar !");
+	}
 }
 

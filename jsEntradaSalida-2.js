@@ -2,12 +2,14 @@
 y luego mostrarlo por 'alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-	var nombre
-    nombre = "Juan";
-    nombre = prompt ("Ingresa tu nombre");
-    alert (nombre);
+	var importe;
+	var resultado;
 
+	importe=document.getElementById('importe').value;
+	importe=parseInt(importe);
+	importe=prompt(importe);
+	resultado=parseInt(resultado);
+	resultado=importe*0.21;
 
-	var person = prompt("Ingresa tu nombre", "Natalia Natalia");
 }
 
