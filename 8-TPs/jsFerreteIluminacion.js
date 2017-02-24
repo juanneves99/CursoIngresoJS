@@ -10,5 +10,82 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+ 	var Cantidad;
+ 	var PrecioBruto;
+ 	var precioDescuento;
+ 	var ArgentinaLuz;
+ 	var FelipeLamparas;
+ 	var JeLuz;
+ 	var HazIluminacion;
+ 	var Osram;
+ 	Marca=document.getElementById('Marca').value;
+ 	Cantidad=document.getElementById('Cantidad').value;
+ 	PrecioBruto=Cantidad*35;
+ 	if(Cantidad>5)
+ 	{
+ 		precioDescuento=PrecioBruto*0.5;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+ 	}
  	
+ 	if(Cantidad==5&& Marca=="ArgentinaLuz")
+ 	{
+ 		precioDescuento=(Cantidad*PrecioBruto)*0.4;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+ 	}
+ 	else
+ 	{
+ 		switch(Marca)
+ 		{
+ 			case "FelipeLamparas":
+ 			case "JeLuz":
+ 			case "HazIluminacion":
+ 			case "Osram":
+ 			precioDescuento=(Cantidad*PrecioBruto)*0.3;
+ 			document.getElementById('precioDescuento').value=precioDescuento;
+ 			break;
+ 		}
+ 	}
+ 	if(Cantidad==4&& Marca=="ArgentinaLuz" || "FelipeLamparas")
+ 	{
+ 		precioDescuento=(Cantidad*PrecioBruto)*0.75;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+ 	}
+ 	else
+ 	{
+ 		switch(Marca)
+ 		{
+ 			case "JeLuz":
+ 			case "HazIluminacion":
+ 			case "Osram":
+ 			precioDescuento=(Cantidad*PrecioBruto)*0.2;
+ 			document.getElementById('precioDescuento').value=precioDescuento;
+ 			break;
+ 		}
+ 	}
+ 	if(Cantidad==3&& Marca=="ArgentinaLuz")
+ 	{
+ 		precioDescuento=(Cantidad*PrecioBruto)*0.15;
+ 		document.getElementById('precioDescuento').value=precioDescuento;
+ 	}
+ 	else
+ 	{
+ 		if(Cantidad==3&& Marca=="FelipeLamparas")
+ 		{
+ 			precioDescuento=(Cantidad*PrecioBruto)*0.10;
+ 			document.getElementById('precioDescuento').value=precioDescuento;
+ 		}
+ 		else
+ 		{
+ 			switch(Marca)
+ 			{
+ 				case "JeLuz":
+ 				case "HazIluminacion":
+ 				case "Osram":
+ 				precioDescuento=(Cantidad*PrecioBruto)*0.5;
+ 				document.getElementById('precioDescuento').value=precioDescuento;
+ 				break;
+ 			}
+ 		}
+ 	}
+
 }
