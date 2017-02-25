@@ -11,3 +11,40 @@ function ComenzarIngreso ()
 {
  	
 }
+
+function NumerosPrimos ()
+
+{
+	var numIngresado;
+	var recorrido;
+	var anteriores;
+	var esPrimo;
+	var noEsPrimo;
+
+	numIngresado=document.getElementById('numIngresado').value;
+	numIngresado=parseInt(numIngresado);
+
+
+	for(recorrido=2; recorrido<=numIngresado; recorrido++)
+	{
+		noEsPrimo="no";
+
+		for(anteriores=2; anteriores<recorrido; anteriores++;)
+		{
+			if(recorrido%anteriores==0)
+			{
+				noEsPrimo="si";
+				break;
+			}
+		}
+
+		if(noEsPrimo=="si")
+		{
+
+		}
+		else
+		{
+			console.log("el "+recorrido+" es primo");
+		}
+	}
+}
